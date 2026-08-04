@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Covid-32 — Andrea Monti Malicurgo</title>
+<meta name="description" content="Covid-32, racconto di Andrea Monti Malicurgo tratto dalla raccolta Un brivido mi avvolse.">
+<link rel="canonical" href="https://www.malicurgo.it/covid-32.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bianco:#FFFFFF;
+    --inchiostro:#1A1815;
+    --vinaccia:#7A1F2B;
+    --vinaccia-scuro:#5A1620;
+    --grigio:#8C8680;
+    --grigio-chiaro:#E7E4DF;
+    --crema:#FBFAF8;
+
+    --display: 'Fraunces', serif;
+    --corpo: 'Source Serif 4', serif;
+    --utility: 'Inter', sans-serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  body{
+    background:var(--bianco);
+    color:var(--inchiostro);
+    font-family:var(--corpo);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  .container{
+    max-width:720px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  header{
+    position:sticky;
+    top:0;left:0;right:0;
+    z-index:10;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--grigio-chiaro);
+  }
+
+  nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 32px;
+    max-width:1100px;
+    margin:0 auto;
+  }
+
+  .logo{
+    font-family:var(--display);
+    font-size:1.05rem;
+    letter-spacing:0.02em;
+    font-weight:500;
+  }
+
+  .torna{
+    font-family:var(--utility);
+    font-size:0.78rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--grigio);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    transition:color 0.25s ease;
+  }
+  .torna:hover{color:var(--vinaccia);}
+
+  .copertina-racconto{
+    width:180px;
+    margin:0 auto 36px;
+    aspect-ratio:2/3;
+    border-radius:2px;
+    overflow:hidden;
+    box-shadow:0 24px 48px -18px rgba(26,24,21,0.35);
+  }
+  .copertina-racconto img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  .intestazione-racconto{
+    padding:100px 0 60px;
+    text-align:center;
+    border-bottom:1px solid var(--grigio-chiaro);
+    margin-bottom:70px;
+  }
+
+  .intestazione-racconto .etichetta{
+    font-family:var(--utility);
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--vinaccia);
+    margin-bottom:20px;
+  }
+
+  .intestazione-racconto h1{
+    font-family:var(--display);
+    font-weight:300;
+    font-size:clamp(2.6rem,7vw,4.2rem);
+    letter-spacing:-0.01em;
+    margin-bottom:18px;
+  }
+
+  .intestazione-racconto .provenienza{
+    font-family:var(--corpo);
+    font-style:italic;
+    color:var(--grigio);
+    font-size:1.05rem;
+  }
+
+  .intestazione-racconto .provenienza a{
+    border-bottom:1px solid var(--grigio);
+  }
+  .intestazione-racconto .provenienza a:hover{
+    color:var(--vinaccia);
+    border-color:var(--vinaccia);
+  }
+
+  .testo-racconto{
+    padding-bottom:120px;
+  }
+  
+  .block_3 {
+  margin: 10px 0;
+}
+
+
+ p.block_5 {
+  text-align: justify;
+  line-height: 1.4;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0;
+}
+
+
+  .block_10 {
+    text-align: center;
+	}
+
+
+.firma {
+  font-style: italic;
+  font-family: Arial !important;
+  text-align: right;
+  margin-top: 10px;
+  font-variant-ligatures: none;
+}
+
+
+  .testo-racconto p{
+    font-size:1.15rem;
+    color:#2A2622;
+    margin-bottom:26px;
+    max-width:68ch;
+  }
+
+  .testo-racconto p:first-of-type::first-letter{
+    font-family:var(--display);
+    font-size:4.2rem;
+    font-weight:500;
+    float:left;
+    line-height:0.85;
+    padding-right:12px;
+    padding-top:6px;
+    color:var(--vinaccia);
+  }
+
+  .chiusura{
+    margin-top:60px;
+    padding-top:40px;
+    border-top:1px solid var(--grigio-chiaro);
+    text-align:center;
+  }
+
+  .chiusura .firma{
+    /*font-family:var(--display);*/
+    font-style:italic;
+    font-size:1.3rem;
+    color:var(--grigio);
+    margin-bottom:32px;
+  }
+
+  .chiusura .btn{
+    font-family:var(--utility);
+    font-size:0.82rem;
+    letter-spacing:0.04em;
+    padding:13px 26px;
+    border-radius:2px;
+    border:1px solid var(--inchiostro);
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--inchiostro);
+    color:var(--bianco);
+    transition:all 0.25s ease;
+  }
+  .chiusura .btn:hover{
+    background:var(--vinaccia);
+    border-color:var(--vinaccia);
+  }
+
+  footer{
+    padding:32px;
+    text-align:center;
+    font-family:var(--utility);
+    font-size:0.72rem;
+    color:var(--grigio);
+    border-top:1px solid var(--grigio-chiaro);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Andrea Monti Malicurgo</div>
+    <a href="index.html#libri" class="torna">← Torna ai libri</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="intestazione-racconto container">
+    <div class="copertina-racconto">
+      <img src="immagini/Covid-32-I-100.jpg" alt="Copertina di Covid-32, racconto di Andrea Monti Malicurgo">
+    </div>
+    <div class="etichetta">Racconto</div>
+    <h1>Covid-32</h1>
+    <p class="provenienza">Tratto dalla raccolta <a href="index.html#libri">Un brivido mi avvolse</a></p>
+  </div>
+
+  <article class="testo-racconto container">    
+    <head>
+    <title>Sconosciuto</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+<link rel="stylesheet" type="text/css" href="page_styles.css"/>
+</head>
+  <body class="calibre">
+<p class="block_3"> </p>
+	<p class="block_5">Quest’opera è protetta dalla legge sul diritto d’autore. </p>
+	<p class="block_5">È vietata ogni duplicazione, anche parziale, non autorizzata.</p>	
+	<p class="block_5">Copyright © 2020 Andrea Monti Malicurgo</p>	
+	<p id="id_Hlk61169229" class="block_6"><span class="text_"></span><a href="mailto:andrea.monti@malicurgo.it" class="calibre1"><span class="text_"></span><span class="text_1">andrea.monti@malicurgo.it</span><span class="text_"></span></a></p>
+	<p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="block_10"><span class="calibre2">*    *    *</span></p>
+	
+	<p class="block_3"> </p>
+	<p class="block_4" id="calibre_pb_1"> </p>
+</body>
+    <p class="block_5">Ieri non ho scritto nulla, siamo arrivati a tarda sera, ero così fradicio, che il mio unico pensiero è stato quello di scaldarmi e riposare. Comunque, posso sintetizzare la giornata di ieri con un’unica parola, acqua.</p>
+	<p class="block_5">Ha piovuto sin dal mattino e ha continuato fino a tarda notte. Acqua, tanta acqua, scrosci violenti e vento che hanno vanificato la protezione della mantellina. L'acqua si è infilata ovunque, non avevo un millimetro quadro del mio corpo asciutto. Per fortuna abbiamo trovato una casa abbandonata. Abbiamo camminato tutto il giorno con la testa bassa e, non vedendo il percorso, ci siamo anche persi nel bosco, senza trovare alcun riparo. Stamani non pioveva, ma il terreno era così inzuppato e i nostri vestiti non ancora asciutti, che è stato quasi peggio di ieri. Mi sono sforzato molto questa sera per tirare fuori il mio piccolo quaderno e scrivere queste righe. Lo avevo riposto in un sacchetto di plastica ermetico assieme alla matita, sono le uniche cose rimaste asciutte. Oggi mi sono ripetutamente chiesto, perché sono finito quassù? Chi me lo ha fatto fare? Avrei potuto tentare altre vie, ma Marco ha insistito per andare in collina, secondo lui c’era più probabilità di trovare altre persone e del cibo, ma fino ad ora non abbiamo trovato anima viva. Non so se nei prossimi giorni riuscirò a scrivere.</p>
+	<p class="block_3"> </p>
+	<p class="block_5">Penso che siano passati tre giorni da quando ho scritto l’ultima volta, con questa burrasca ho perso la cognizione del tempo. Per fortuna questa mattina c’è il sole e abbiamo potuto camminare più agevolmente. Oggi, prima di arrivare alla casa in cui siamo ora, abbiamo trovato un’abitazione in ordine, pareva abitata, c’era il riscaldamento acceso con il camino fumante, ma quando mi sono avvicinato alla porta ho sentito un odore nauseabondo. Ho intravisto dal vetro della finestra un corpo sdraiato a terra in putrefazione. Anche se in quella casa avremmo potuto trovare del cibo, non abbiamo avuto il coraggio di entrare, sicuramente tutta la zona era contaminata. Un gatto sopra un muretto si lisciava il pelo indifferente all’accaduto. Sembra che alcuni animali siano portatori della malattia, ma non abbiano alcuna conseguenza visibile. Marco gli ha dato una crosta secca di formaggio. Dopo averla divorata ha cominciato a seguirci come un cane. Ho cercato in tutti i modi di convincere Marco di non toccarlo, poiché, se fosse stato contagioso, avrebbe potuto trasmettere il virus anche a noi. Il virus si trasmette con la saliva e i gatti si leccano continuamente.</p>
+	<p class="block_3"> </p>
+	<p class="block_5">E' da tempo che Marco non mi rivolge la parola, è ingrugnito come una iena, ma che c'entro io? È colpa mia se ci troviamo in questa situazione? Anch’io ho fame, mica l'ho convinto io a venire a cercare cibo quassù. Sembra che gli importi solo di quel gatto che ci accompagna da qualche giorno. Vivendo insieme percepisco sempre più il suo pessimo carattere e comincio a pensare che sarebbe stato meglio venire da solo. Solo come mi sento ora.</p>
+	<p class="block_3"> </p>
+	<p class="block_5">Ieri sera gli ho chiesto per quale motivo non mi parlava più. Lui è rimasto seduto a terra in silenzio, guardando verso il muro e continuando ad accarezzare quel gatto che riposava tra le sue gambe. Gli ho osservato che nell'ultimo periodo mi era parso sempre più anomalo, così ha diretto lentamente lo sguardo verso di me, marcando uno strano sorriso; la luce radente della candela gli faceva apparire il volto ancora più contorto e demoniaco. Poi ha iniziato ridere forzatamente, sempre più forte fissandomi con occhi di fuoco, dopodiché anche il suo gatto ha alzato la testa per guardarmi e, incredibilmente, ha cominciato a ridere! No, non è possibile! I gatti non ridono, allora sono io che sto diventando pazzo? Sono pazzo.</p>
+	<p class="block_3"> </p>
+	<p class="block_5">Ho sempre respirato bene, ma questo non significa molto, potrebbe avermi preso al cervello, ho saputo di molte persone andate in depressione che poi si sono tolte la vita. All’inizio si pensava che lo facessero per le gravi condizioni sul nostro pianeta, ma ora, dato il numero elevato di suicidi, penso che la causa possa essere questo maledetto virus. La mia è solo una supposizione perché se c’è una certezza su questo virus è che nessuno finora ci ha capito nulla.</p>
+	<p class="block_3"> </p>
+	<p class="block_5">Scrivo per distrarmi sperando che un giorno qualcuno possa leggere i miei appunti e comprendere qualcosa. Purtroppo, non ho molto materiale su cui scrivere, solo quaderni mezzi consumati trovati in qualche abitazione. Quando ne finisco uno lo nascondo nei pressi di una casa abbandonata. Ho disegnato una mappa che tengo in tasca sperando che un giorno, quando si sarà sistemato tutto, potrò in qualche modo recuperarli.</p>
+	<p class="block_5">Ormai Marco si comporta come se non esistessi, non mi dice o chiede nulla, lo seguo solo perché in questa zona c’è solo una strada. Spero solo che non sia ammalato e che non mi possa infettare se già non lo ha fatto. Non credo si riprenderà più, parla solo con quel gatto, ed io so che parlano contro di me! </p>
+	<p class="block_5">Purtroppo, ci troviamo in una zona colpita duramente e non siamo riusciti ad incontrare nessuno.</p>
+	<p class="block_3"> </p>
+	<p class="block_5">Oggi pomeriggio è stato surreale. Siamo entrati nell’abitazione ben tenuta in cui mi trovo ora. Non trovando gente nelle città, fino ad oggi abbiamo creduto che le persone, per scappare dall’epidemia, fossero andate nelle seconde case dei paesi limitrofi, ma di fatto anche queste zone sono disabitate e troviamo solo case vuote. Questa casa era deserta con la porta sbarrata. Siamo riusciti con difficoltà ad entrare da una finestra del pian terreno. Abbiamo cercato dappertutto qualcosa da mettere sotto i denti. Marco ha trovato nella credenza delle scatolette sigillate e perfettamente tenute, ma non mi ha detto niente. Quando sono sceso dal piano superiore, l’ho trovato seduto al tavolo della cucina che mangiava una scatola di fagioli, il gatto era sul tavolo che si stava finendo una scatoletta di tonno. Appena mi sono reso conto della situazione mi sono imbestialito: ma come? Gli ho rimproverato. Sono giorni che camminiamo senza trovare nulla e l’unica scatola di tonno l’hai data al gatto? Quel deficiente mentale mi ha risposto: lo sanno tutti che i gatti non mangiano i fagioli e mi ha lanciato una scatola di piselli che aveva tenuto per me. Cosa me ne importa di quel gatto, tra noi è l’unico in grado di trovarsi da mangiare da solo. Quella scatoletta la volevo io, perché non mi hai detto nulla del ritrovamento? Lui mi ha guardato ridendo allo stesso modo dell’altra sera, sembrava un folle, non ci ho visto più. Ti prendi gioco di me? Gli ho messo le mani al collo e non l’ho strangolato solo perché non avevo più forza. Ha giurato di non aver trovato altro cibo, ma non gli credo, non credo più a quel bastardo. Alla fine, mi sono mangiato i piselli che mi aveva lasciato, osservato dal gatto che si puliva il muso soddisfatto del suo pranzo. Marco era uscito dalla casa e quel gatto era rimasto per prendermi in giro con il suo sguardo malevolo. Lo so che mi odia.</p>
+	<p class="block_3"> </p>
+	<p class="block_5">Ancora non riesco a comprendere come siamo arrivati sino a questo punto. Questa mattina mi sono svegliato bruscamente senza respiro con una forbice puntata davanti agli occhi. Mentre dormivo, Marco si è seduto a cavalcioni sul mio torace bloccandomi le braccia con le sue gambe e mi ha puntato le forbici in faccia minacciandomi: non ti azzardare mai più a mettermi le mani addosso, io non ti devo proprio niente. Bella riconoscenza, strangolarmi dopo che ti ho dato una mia scatola da mangiare, la prossima volta ti taglio la gola nel sonno. Mi ha detto, con una voce, un tono, una faccia, che non avevo mai visto prima. È completamente andato fuori di testa. Non ho reagito, non potevo, in quella posizione non riuscivo a muovermi e ho temuto veramente per la mia vita. Certamente non ragiona più e forse neppure io.</p>
+	<p class="block_3"> </p>
+	<p class="block_5">Riprendo il mio piccolo diario solo oggi dopo alcuni giorni passati a girovagare senza meta. La morte di Marco mi ha sconvolto. Non aveva mai avuto segni di decadimento, a parte il suo isolamento e una forma iniziale di demenza, ma questo non può giustificare la sua morte improvvisa nel sonno, non aveva mai neppure tossito! Vago per i monti con un atroce dubbio: è possibile che sia stato io? Non ho nessun ricordo in proposito, solo che l’altra sera non riuscivo ad addormentarmi pensando allo sguardo folle di Marco. Ho avuto paura, ma è possibile che l’abbia ucciso senza ricordarmi nulla? Sto impazzendo. Il suo gatto è ancora qui, mi segue senza un motivo, non ho più nulla da dargli. Ho paura anche di lui, non è normale che un gatto mi segua sempre e mi guardi con quell’aria di sufficienza. Ma che cosa sto scrivendo? Ho veramente paura di quel piccolo gatto? Allora sono matto.</p>
+	<p class="block_3"> </p>
+	<p class="block_5">Non so bene quanti anni sono che non incontro nessuno, non avendo un calendario o un orologio, devo basarmi solo sul conteggio dei giorni e delle stagioni. Talvolta ho sonni irregolari e perdo il conto. Osservare le stagioni non aiuta, ormai da tanto tempo c’è solo un’unica stagione per tutto l’anno. Approssimativamente dall’ultima volta che ho sentito un notiziario sul virus parlavano del covid-32. Questa è l’ultima mutazione genetica che ricordo, ma poi, chi può dirlo quante altre mutazioni siano avvenute. Dal quel giorno saranno passati almeno dieci anni!</p>
+	<p class="block_3"> </p>
+	<p class="block_5">Viene difficile pensare ai virus come un qualcosa di utile, eppure ricordo di aver letto anni fa che questi organismi hanno avuto conseguenze sulla storia naturale provocando mutamenti nelle specie aggredite e contribuendo alla loro evoluzione.</p>
+	<p class="block_5">Anche se allo stato attuale non mi pare che ci siano stati effetti benefici sulla nostra specie, sono certo che il genere umano ce la farà a passare anche questo momento e che i sopravvissuti diventeranno certamente più forti. Così come abbiamo superato tante altre pandemie, sconfiggeremo anche questo maledetto. Già mi vedo festeggiare e celebrare questo brutto ricordo come un retaggio di un lontano tragico passato.</p>
+	<p class="block_3"> </p>
+	<p class="block_5">Oggi scrivo le ultime righe di questo quaderno dopo due giorni di cammino senza sosta. Ieri sono riuscito a liberarmi del gatto. Sono arrivato ad un casolare abbandonato circondato da gatti, così anche il gatto che mi seguiva si è aggregato al branco. La cosa strana è che ad un certo momento tutti insieme si sono messi a guardarmi insistentemente. Erano come sincronizzati su un’idea comune, dandomi la sensazione di volermi sbranare. Ho avuto paura e sono quindi fuggito in mezzo ai rovi. Mi sono ferito, ma almeno sono riuscito a liberarmene. Chissà, forse sono io che non ragiono più, vedo tutto contro di me, forse anch’io sono malato, i gatti non mangiano gli uomini! Continuerò a scrivere su un altro quaderno dirigendomi ad est. </p>
+	<p class="block_3"> </p>
+	<p class="block_10"><span class="calibre2">*    *    *</span></p>
+	<p class="block_3"> </p>
+	<p class="block_5">Il professore Seelees, chiuse il libro e si rivolse agli studenti.</p>
+	<p class="block_5">«Quello che abbiamo letto oggi è forse il più importante reperto archeologico ritrovato degli ultimi duecento anni. È stato completamente tradotto solo trentacinque anni fa nella nostra lingua grazie ai precedenti ritrovamenti della città di Avvii e del parco archeologico di Teneea di cui abbiamo già parlato nelle scorse lezioni, che, ricordo, sono i testi fondamentali che ci hanno permesso di comprendere completamente la scrittura di questa antica civiltà. Questo piccolo testo di un autore anonimo, pur se incompleto, in quanto non sono ancora stati ritrovati gli altri diari citati dall’autore, è giunto a noi perfettamente integro perché sepolto sotto terra e avvolto con cura in un materiale molto utilizzato in quel periodo, dalle eccezionali proprietà di resistenza e impermeabilità, chiamato plastica; un materiale che noi non siamo ancora stati in grado di riprodurre con analoghe caratteristiche probabilmente per la totale scomparsa della materia prima con cui veniva prodotta all’epoca.</p>
+	<p class="block_5">Capite anche voi quante informazioni ci sono pervenute da questo ritrovamento, considerando la datazione annotata, anche se approssimativa, che riporta il duemila quarantadue del loro calendario ossia ben oltre cinquemila anni prima dell’inizio del nostro calendario di Lelaan! Ne consegue che questo testo risale approssimativamente ad oltre settemila anni fa, ma la cosa più importante è la chiara congiunzione che esprime con quelli che noi oggi chiamiamo i nostri antenati. Proprio qui, in questo piccolo testo, ci sono le basi nella nostra evoluzione, della nostra storia…»</p>
+	<p class="block_5">Suonò la sirena dell’intervallo e gli studenti cominciarono a riporre le loro attrezzature.</p>
+	<p class="block_5">«Bene, domani riprenderemo la lezione da questo punto, approfondiremo le origini della nostra civiltà e della nostra straordinaria accelerazione evolutiva. Buono studio, a domani.»</p>
+	<p class="block_5">Il professore Seelees spense il grande proiettore utilizzando la sua formidabile unghia retrattile e gli studenti salutarono miagolando.</p>
+    <p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="firma">Andrea Monti Malicurgo</p>
+
+
+    <div class="chiusura">
+      <!-- <p class="firma">Andrea Monti Malicurgo</p> 
+	  <p class="block_3"> </p>-->
+	  <p class="block_3"> </p>
+      <a href="https://www.kobo.com/it/it/ebook/covid-32?sId=0bc2b78f-3e71-4c9a-b4e7-1e2705eacb20&ssId=fAb_knvPM8RbuERztqc5Y&cPos=2" class="btn">Scaricalo gratuitamente su Kobo</a>
+    </div>
+
+  </article>
+
+</main>
+
+<footer>
+  © 2026 Andrea Monti Malicurgo. Tutti i diritti riservati.
+</footer>
+
+</body>
+</html>
