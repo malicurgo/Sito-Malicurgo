@@ -21,13 +21,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+	<!-- contatore - prima parte -->
+<script src="https://counter.dev/script.js" data-id="malicurgo.it"></script>
 </head>
 
-<script>
+<!--<script>
 fetch("https://api.countapi.xyz/hit/malicurgo.it/index")
   .then(r => r.json())
   .then(data => console.log("Visite index:", data.value));
-</script>
+</script>-->
+
+
 
 <!-- MODALE IMMAGINE A SCHERMO INTERO -->
 <div id="modal-img" class="modal-img">
@@ -177,10 +182,21 @@ fetch("https://api.countapi.xyz/hit/malicurgo.it/index")
 
 </main>
 
+	
 <footer>
   © 2026 Andrea Monti Malicurgo. Tutti i diritti riservati.
+	<!-- contatore -->
+<div id="visite" style="text-align:right;font-size:0.75rem;color:var(--grigio);margin-top:10px;"></div>
 </footer>
 
+<script>
+fetch("https://counter.dev/api/malicurgo.it")
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById("visite").innerText = "v: " + data.views;
+  });
+</script>	
+	
 <script>
   // Reveal on scroll
   const elementi = document.querySelectorAll('.reveal');
