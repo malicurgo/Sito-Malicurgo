@@ -228,6 +228,14 @@
   }
 </style>
 </head>
+
+<script>
+fetch("https://api.countapi.xyz/hit/malicurgo.it/covid32")
+  .then(r => r.json())
+  .then(data => console.log("Visite covid-32:", data.value));
+</script>
+
+
 <body>
 
 <header>
