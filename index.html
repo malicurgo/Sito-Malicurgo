@@ -22,17 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
-	<!-- contatore - prima parte -->
-<script src="https://counter.dev/script.js" data-id="malicurgo.it"></script>
 </head>
-
-<!--<script>
-fetch("https://api.countapi.xyz/hit/malicurgo.it/index")
-  .then(r => r.json())
-  .then(data => console.log("Visite index:", data.value));
-</script>-->
-
-
 
 <!-- MODALE IMMAGINE A SCHERMO INTERO -->
 <div id="modal-img" class="modal-img">
@@ -48,7 +38,7 @@ fetch("https://api.countapi.xyz/hit/malicurgo.it/index")
     <ul class="nav-links">
       <li><a href="#chi-sono">Chi sono</a></li>
       <li><a href="#libri">Libri</a></li>
-	  <li><a href="#citazioni">Citazioni</a></li>
+	  <li><a href="#citazioni">Frammenti</a></li>
       <li><a href="#contatti">Contatti</a></li>
     </ul>
   </nav>
@@ -151,22 +141,22 @@ fetch("https://api.countapi.xyz/hit/malicurgo.it/index")
 
 <section class="citazioni container" id="citazioni">
   <div class="etichetta reveal">Frasi dai libri</div>
-  <h2 class="reveal">Citazioni</h2>
+  <h2 class="reveal">Frammenti</h2>
 
   <div class="citazioni-container">
 
     <figure class="citazione reveal">
-      <img src="immagini/img-lasciato.jpg" alt="Citazione 1">
+      <img src="immagini/img-lasciato.jpg" alt="Frammento 1">
       <figcaption>Da "Quel sottile pensiero dell'inspiegabile"</figcaption>
     </figure>
 
     <figure class="citazione reveal">
-      <img src="immagini/img-capisco.jpg" alt="Citazione 2">
+      <img src="immagini/img-capisco.jpg" alt="Frammento 2">
       <figcaption>Da "Quel sottile pensiero dell'inspiegabile"</figcaption>
     </figure>
 
     <figure class="citazione reveal">
-      <img src="immagini/img-eppure.jpg" alt="Citazione 3">
+      <img src="immagini/img-eppure.jpg" alt="Frammento 3">
       <figcaption>Da "Quel sottile pensiero dell'inspiegabile"</figcaption>
     </figure>
 
@@ -190,10 +180,13 @@ fetch("https://api.countapi.xyz/hit/malicurgo.it/index")
 </footer>
 
 <script>
-fetch("https://counter.dev/api/malicurgo.it")
+fetch("https://api.counterapi.dev/v1/malicurgo/homepage/up")
   .then(r => r.json())
   .then(data => {
-    document.getElementById("visite").innerText = "v: " + data.views;
+    document.getElementById("visite").innerText = "v: " + data.value;
+  })
+  .catch(() => {
+    document.getElementById("visite").innerText = "v: —";
   });
 </script>	
 	
